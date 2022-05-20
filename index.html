@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='index.css'/>
+
+    <title>PokeWar</title>
+</head>
+<body>
+    <div id='master-div'>
+        <div id='header'>
+            <h1>PokeWar</h1>
+            <h6><a href='http://github.com/dlmarshall3'>Github</a> | <a href='#' id='volume-toggle'>Toggle Volume</a></h6>
+        </div>
+        <div id='index-dialog'>
+            <h3 id='initial-dialog-h3'>Well, hello there!</h3>
+            <img src='assets/arrow.png' id='initial-text-arrow'>
+        </div>
+    </div>
+
+    <div id='returning-div'>
+        <div id='returning-dialog'>
+            <h3 id='returning-dialog-h3'>I see you've played before. Thanks for returning! Would you like to continue with your settings, or start over?</h3>
+            <img src='assets/arrow.png' id='text-arrow-return'>
+        </div>
+    </div>
+
+    <div id='returning-choices-div'>
+        <div id='returning-choices-dialog'>
+            <span id='continue'><h3>Continue</h3></span><span id='new-game'><h3>New Game</h3></span>
+        </div>
+    </div>
+
+    <div class='container-number-choice'>
+        <div class='26-choice-image'>
+            <label>
+                <input type='radio' name='number-choice' value='26' class='number-choice-radio'>
+                <img src='assets/26choice.png' class='number-choice-img'>
+                <h3>26</h3>
+            </label>
+        </div>
+        <div class='52-choice-image'>
+            <label>
+                <input type='radio' name='number-choice' value='52' class='number-choice-radio'>
+                <img src='assets/52choice.png' class='number-choice-img'>
+                <h3>52</h3>
+            </label>
+        </div>
+        <div class='100-choice-image'>
+            <label>
+                <input type='radio' name='number-choice' value='100' class='number-choice-radio'>
+                <img src='assets/100choice.png' class='number-choice-img'>
+                <h3>100</h3>
+            </label>
+        </div>  
+    </div>
+
+    <div class='container-generation-choice'>
+        <div class='red-and-blue-choice'>
+            <label>
+                <input type='radio' name='generation-choice' value='151'>
+                <img src='assets/gen-one.png' id='gen-one' class='generation-choice-img'>
+                <h3>Generation One</h3>
+                <h3>(1-151)</h3>           
+            </label>
+        </div>
+        <div class='gold-and-silver-choice'>
+            <label>
+                <input type='radio' name='generation-choice' value='251'>
+                <img src='assets/gen-two.png' id='gen-two' class='generation-choice-img'>
+                <h3>Generation Two</h3>
+                <h3>(1-251)</h3>
+            </label>            
+        </div>
+        <div class='ruby-and-sapphire-choice'>
+            <label>
+                <input type='radio' name='generation-choice' value='386'>
+                <img src='assets/gen-three.png' id='gen-three' class='generation-choice-img'>
+                <h3>Generation Three</h3>
+                <h3>(1-386)</h3>
+            </label>            
+        </div>
+    </div>
+
+    <audio id='select' src='assets/select.wav' class='audio' type='audio/wav'></audio>
+    <audio id='intro-music' src='assets/intro_edited.mp3' class='audio' type='audio/mp3' loop></audio>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js'></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+    <script src='index.js'></script>
+
+</body>
+</html>

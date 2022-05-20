@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'PKMN RBYGSC';
+    src: local('PKMN RBYGSC'), url('assets/font/PKMN\ RBYGSC.ttf');
+}
+
+h1, h3, h6 {
+    font-family: 'PKMN RBYGSC';
+}
+
+#choice-text-arrow {
+    position: fixed;
+}
+
+#choice-text-arrow, #text-arrow-return, #initial-text-arrow {
+    position: relative;
+    cursor: pointer;
+}
+
+#continue, #new-game {
+    cursor: pointer;
+}
+
+#index-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 25vh;
+    min-width: 300px;
+}
+
+#number-of-pokemon {
+    display: none;
+}
+
+#master-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 75vw;
+}
+
+#returning-choices-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#returning-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 25vh;
+    min-width: 300px;
+}
+
+#returning-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-generation-choice {  
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      'red-and-blue-choice gold-and-silver-choice ruby-and-sapphire-choice'
+}
+
+.container-number-choice {  
+    display: none;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      '26-choice-image 52-choice-image 100-choice-image'
+}
+
+.volume-child {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.volume-parent{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+}
+
+[type=radio]{
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+[type=radio] + img {
+    cursor: pointer;
+}
+
+@media screen and (max-device-width: 950px) {
+    #returning-dialog, #index-dialog {
+        width: 50vw;
+    }
+
+    .number-choice-img, .generation-choice-img{
+        width: 60%;
+    }
+}
+
+@media screen and (max-device-width: 700px){
+    .container-number-choice {
+        grid-template-columns: 1fr;
+        grid-template-areas: '26-choice-image' '52-choice-image' '100-choice-image';
+    }
+    
+    .container-generation-choice {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'red-and-blue-choice' 'gold-and-silver-choice' 'ruby-and-sapphire-choice';
+    }
+    
+    .generation-choice-img {
+        width: 30%;
+    }
+    
+    .number-choice-img {
+        width: 30%;
+    }
+
+    #initial-text-arrow {
+        margin-top: 10.5rem;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    #text-arrow-return {
+        position: relative;
+        cursor: pointer
+    }
+
+}
+

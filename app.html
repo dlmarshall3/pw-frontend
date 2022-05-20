@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='app.css'>
+	<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor' crossorigin='anonymous'>
+    <title>PokeWar</title>
+</head>
+<body>
+
+<div class='container-fluid hide-master-div' id='master-div'>
+	<div class='row order-md-1 order-1'>
+		<div class='col-md-12' id='header'>
+			<h1>PokeWar</h1>
+			<h6 id='header-h6'><a href='index.html'> Home</a> | <a href='#' data-bs-toggle='modal' data-bs-target='#rules'>Rules</a> | <a href='#' data-bs-toggle='modal' data-bs-target='#about-the-app'>About the app</a> | <a href='http://github.com/dlmarshall3'>Github</a> | <a href='#' id='volume-toggle'>Toggle Volume</a></h6>
+		</div>
+	</div>
+	<div class='row full-width order-md-2 order-3 mt-2'>
+		<div class='col-md-6 player-two-stats order-md-1 order-2 mt-2'>
+			<h2 id='player-two-name' class='initial-hidden'>Name</h2>
+            <h3 id='player-two-stats-h3' class='initial-hidden stats-h3'></h3>
+            <h4 class='hp-h4'>Player Two HP</h4>
+            <div class='hp' id='player-two-hp-div'>
+                <span id='player-two-hp-span'></span>
+            </div>
+		</div>
+		<div class='col-md-6 player-two-pokemon order-md-2 order-1 mt-2'>
+			<img src='assets/pokeball.png' class='pokemon-img' id='player-two-pokemon-img'>
+		</div>
+	</div>
+	<div class='row full-width order-md-3 order-2 mt-2'>
+		<div class='col-md-6 player-one-pokemon mt-2'>
+			<img src='assets/pokeball.png' class='pokemon-img' id='player-one-pokemon-img'>
+		</div>
+		<div class='col-md-6 player-one-stats mt-2'>
+			<h2 id='player-one-name' class='initial-hidden'>Name</h2>
+            <h3 id='player-one-stats-h3' class='initial-hidden stats-h3'></h3>
+            <h4 class='hp-h4'>Player One HP:</h4>
+            <div class='hp' id='player-one-hp-div'>
+                <span id='player-one-hp-span'></span>
+            </div>
+		</div>
+	</div>
+	<div class='row order-md-4 order-4 play-div'>
+		<div class='col-md-12' id='time-for-war-div'>
+			<h2 id='replacement-h2'></h2>
+        	<button id='play-button'></button>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid parent-winner-div">
+	<div class="row">
+		<div class="col-md-4 winner-div align-items-center">
+			<h3 id='player-wins-h3'></h3>
+		</div>
+		<div class="col-md-4 winner-img-div align-items-center">
+			<img src='' id='winner-img'>
+		</div>
+		<div class="col-md-4 winner-plays-div align-items-center">
+			<h3 id='total-plays-h3'></h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<a href='index.html'><h3>Return Home</h3></a>
+		</div>
+	</div>
+</div>
+
+<div class="modal" tabindex="-1" id='about-the-app'>
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">About the application</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<p>A while back, I was watching my son play 'War' with my wife, and it got me thinking about how it might be fun to integrate this game with something else he loves: Pokemon. However, what I thought would be a simple project ended up being one of the more challenging AND rewarding tasks I've taken upon myself.</p>
+			<p>One of the stipulations I put on myself is I didn't want to rely on any frameworks or libraries like React, Vue, Bootstrap, etc. I have no qualms with any of them; in fact, I work with Vue on a daily basis for work. However, I know it's easy to rely on their conveniences, and I wanted to see what I could do with Vanilla JavaScript, along with jQuery. (Although I will confess, at the end, I did utilize some Bootstrap for the responsive design.)</p>
+			<p>In the end, I'm happy with this project, but more importantly, so is my son, and that's really what matters.</p>
+			<p>Hope you enjoy the game!</p>
+			<p>-David</p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+  <div class="modal" tabindex="-1" id='rules'>
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title">Rules</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<p>War is, arguably, one of the easiest card games to play, and PokeWar isn't any different. When you click on the arrow, each player will draw a Pokemon. Whichever player has the higher stats takes both Pokemon, and you draw again. If you both play Pokemon that have equal stats, you go to war, which means you draw two more Pokemon, and the second of the two will go head-to-head. And sometimes <b>those</b> will go to war.</p>
+
+			<p><b>Average length of a game:</b><br>
+			If you've never played War before, be prepared. Some games can last five to ten minutes; othertimes, games can go almost an hour. In order to prevent never-ending games (which is possible), I do have some shuffling going on to minimize this potential.</p>
+
+			<p><b>How to win:</b><br>
+			You either get all of the other player's Pokemon, or if you go to war three times and you have more Pokemon than the other player.</p>
+
+			<p><b>Type advantages:</b><br>
+			Just like in the video game, there are type advantages, so while your Pokemon might be stronger at first, that may not be how it ends up. For example, if Remoraid (water/300) and Sandshrew (ground/300) go face-to-face, Remoraid would win by getting a 100 point boost since ground is weak against water.</p>
+
+			<p><b>Understanding the numbers on the UI:</b><br>
+			The total stats are underneath the Pokemon's name. If the Pokemon receives a type advantage, the number will turn green; otherwise, if it isn't effective against the opposing Pokemon, the number will turn red. Also, the "HP" bar is based off of how many Pokemon you have in your possession out of the total amount in play. Green means 50% or more, yellow means 20%-49%, and red is under 20%.</p>
+				
+			<p>(PS: Feel free to alternate between being player one and player two throughout the game, depending on who is winning. I won't tell, promise.) </p>
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+	<audio id='gen-one-trainer-music' src='assets/trainer_battle.mp3' class='audio' type='audio/mp3'></audio>
+	<audio id='gen-two-trainer-music' src='assets/trainer_battle_gs.mp3' class='audio' type='audio/mp3'></audio>
+	<audio id='gen-three-trainer-music' src='assets/trainer_battle_rs.mp3' class='audio' type='audio/mp3'></audio>
+	<audio id='gen-one-victory-music' src='assets/redblue_victory.mp3' class='audio' type='audio/mp3'></audio>
+	<audio id='gen-two-victory-music' src='assets/goldsilver_victory.mp3' class='audio' type='audio/mp3'></audio>
+	<audio id='gen-three-victory-music' src='assets/rubysapphire_victory.mp3' class='audio' type='audio/mp3'></audio>
+	<audio id='pokemon-cry' src='' class='audio' type='audio/wav'></audio>
+	<audio id='select' src='assets/select.wav' class='audio' type='audio/wav'></audio>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js'></script>
+	<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2' crossorigin='anonymous'></script>
+	<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js'></script>
+	<script src='app.js'></script>
+
+</body>
+</html>

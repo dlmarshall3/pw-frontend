@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'PKMN RBYGSC';
+    src: local('PKMN RBYGSC'), url('assets/font/PKMN\ RBYGSC.ttf');
+}
+
+h1 {
+    font-family: 'PKMN RBYGSC';
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h2, h3, h4, h6 {
+    font-family: 'PKMN RBYGSC';
+}
+
+#header {
+    margin-bottom: 5rem;
+}
+
+#master-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#play-button {
+    animation: blink .5s;
+    animation-iteration-count: infinite;
+    background-image: url('assets/arrow.png');
+    background-size: cover;
+    width: 81px;
+    height: 60px;
+    border: 0px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#replacement-h2{
+    margin-top: -100px; 
+}
+
+#time-for-war-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+    height: 25vh;
+    width: 40vw;
+}
+
+.full-width {
+    width: 60vw;
+}
+
+.hide-master-div{
+    display: none;
+}
+
+.hidden {
+    filter: contrast(0%) brightness(0%);
+}
+
+.hp {
+    height: 12px;
+    position: relative;
+    background: #DCE0E3;
+    border-radius: 8px;
+    width: 50%;
+}
+
+.hp > span {
+	display: block;
+	height: 100%;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+	background-color: #20df28;
+	position: relative;
+	overflow: hidden;
+}
+
+.initial-hidden {
+    visibility: hidden;
+}
+
+.player-one-pokemon{ 
+    margin-top: 1rem;
+    background-image: url('assets/battle-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.player-one-stats { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.player-two-pokemon{ 
+    background-image: url('assets/battle-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.player-two-stats { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.parent-winner-div {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.stats-h3 {
+    display: inline-block;
+}
+
+.winner-div, .winner-img-div, .winner-plays-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 576px){
+    #header {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+    #player-two-name, #player-two-stats, #player-one-name, #player-one-stats, .hp-h4, #header-h6 {
+        font-size: calc(.75rem + .5vw);
+    }
+
+    #master-div {
+        height: auto;
+    }
+    .pokemon-img {
+        width: 40%;
+    }
+    #play-button {
+        width: 61px;
+        height: 40px;
+    }
+    #time-for-war-div {
+        width: 100%;
+    }
+    .play-div {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+

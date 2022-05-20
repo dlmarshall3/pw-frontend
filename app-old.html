@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='app.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css'/>
+    <title>PokeWar</title>
+</head>
+<body>
+
+<div id='master-div' class='hide-master-div'>
+    
+    <div id='header'>
+        <h1>PokeWar</h1>
+        <h6 id='header-h6'><a href='#about-modal' rel='modal:open'>About the app</a> | <a href='http://github.com/dlmarshall3'>Github</a> | <a href="index.html"> Home</a></h6>
+    </div>
+    
+    <div class='pokemon-container'>
+        <div class='player-one-pokemon'>
+            <img src='assets/pokeball.png' class='pokemon-img' id='player-one-pokemon-img'>
+        </div>
+        <div class='player-one-stats'>
+            <h2 id='player-one-name' class='initial-hidden'>Name</h2>
+            <h3 id='player-one-stats-h3' class='initial-hidden'>Stats</h3>
+            <h4>Player One HP</h4>
+            <div class='hp' id='player-one-hp-div'>
+                <span id='player-one-hp-span'></span>
+            </div>
+        </div>
+
+        <div class='player-two-pokemon'>
+            <img src='assets/pokeball.png' class='pokemon-img' id='player-two-pokemon-img'>
+        </div>
+        <div class='player-two-stats'>
+            <h2 id='player-two-name' class='initial-hidden'>Name</h2>
+            <h3 id='player-two-stats-h3' class='initial-hidden'>Stats</h3>
+            <h4>Player Two HP</h4>
+            <div class='hp' id='player-two-hp-div'>
+                <span id='player-two-hp-span'></span>
+            </div>
+        </div>
+    </div>
+    
+    <div id='time-for-war-div'>
+        <h2 id='replacement-h2'></h2>
+        <button id='play-button'>Play</button>
+    </div>
+
+    <div class='home-parent'>
+        <div class='home-child'>
+            <img src='' id='home-button'>
+        </div>
+    </div>
+</div>
+
+<div class='volume-parent'>
+    <div class='volume-child'>
+        <img src='assets/volumeon.png' id='loudred'>
+    </div>
+</div>
+
+<div class='parent-winner-div'>
+    <div class='container-winner'>
+        <div class='winner-div'>
+            <h3 id='player-wins-h3'></h3>
+        </div>
+        <div class='winner-img-div'>
+            <img src='' id='winner-img'>
+            <a href='index.html'><h3>Return Home</h3></a>
+        </div>
+        <div class='winner-plays-div'>
+            <h3 id='total-plays-h3'></h3>
+        </div>
+    </div>
+</div>
+
+<div id='about-modal' class='modal'>
+    <p>A while back, I was watching my son play 'War' with my wife, and it got me thinking about how it might be fun to integrate this game with something else he loves: Pokemon. However, what I thought would be a simple project ended up being one of the more challenging AND rewarding tasks I've taken upon myself.</p>
+    <p>One of the stipulations I put on myself is I didn't want to rely on any frameworks or libraries like React, Vue, Bootstrap, etc. I have no qualms with any of them; in fact, I work with Vue on a daily basis for work. However, I know it's easy to rely on their conveniences, and I wanted to see what I could do with Vanilla JavaScript, along with jQuery.</p>
+    <p>In the end, I'm happy with this project, but more importantly, so is my son, and that's really what matters.</p>
+    <p>Hope you enjoy the game!</p>
+    <p>-David</p>
+</div>
+
+
+
+<audio id='gen-one-trainer-music' src='assets/trainer_battle.mp3' class='audio' type='audio/mp3'></audio>
+<audio id='gen-two-trainer-music' src='assets/trainer_battle_gs.mp3' class='audio' type='audio/mp3'></audio>
+<audio id='gen-three-trainer-music' src='assets/trainer_battle_rs.mp3' class='audio' type='audio/mp3'></audio>
+<audio id='gen-one-victory-music' src='assets/redblue_victory.mp3' class='audio' type='audio/mp3'></audio>
+<audio id='gen-two-victory-music' src='assets/goldsilver_victory.mp3' class='audio' type='audio/mp3'></audio>
+<audio id='gen-three-victory-music' src='assets/rubysapphire_victory.mp3' class='audio' type='audio/mp3'></audio>
+<audio id='pokemon-cry' src='' class='audio' type='audio/wav'></audio>
+<audio id='select' src='assets/select.wav' class='audio' type='audio/wav'></audio>
+
+
+
+
+    <script src='./node_modules/axios/dist/axios.min.js'></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js'></script>
+    <script src='app.js'></script>
+</body>
+</html>
