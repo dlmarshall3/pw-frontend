@@ -18,7 +18,6 @@ $(document).ready( () => {
     }
     $('#volume-toggle').on('click', audioControl);
     $('#play-button').on('click', playPokemon);
-    $homeButton.on('click', () => { window.location.replace('index.html')});
 });
 
 //Variables
@@ -136,7 +135,7 @@ function drawPokemon(){
 
 function playPokemon(){
 
-    $('.initial-hidden').css('visibility', 'visible')
+    $('.initial-hidden').css('visibility', 'visible');
 
     playCount++;
 
@@ -347,7 +346,6 @@ function playerTwoWins(){
         updateScore();
     }, 600);
 
-    
     drawPokemon();
 }
 

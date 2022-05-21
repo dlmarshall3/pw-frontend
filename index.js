@@ -19,7 +19,7 @@ $(document).ready(function(){
         let numberChoice = document.querySelectorAll('input[type="radio"][name="number-choice"]');
         for (let num of numberChoice){
             if (num.checked) {
-                window.localStorage.setItem('numberOfPokemon', JSON.stringify(num.value))
+                window.localStorage.setItem('numberOfPokemon', JSON.stringify(num.value));
             }
         }
                 setTimeout(function(){
@@ -30,7 +30,7 @@ $(document).ready(function(){
         let generationChoice = document.querySelectorAll('input[type="radio"][name="generation-choice"]');
         for (let gen of generationChoice){
             if (gen.checked) {
-                window.localStorage.setItem('generationChoice', JSON.stringify(gen.value))
+                window.localStorage.setItem('generationChoice', JSON.stringify(gen.value));
             }
         }
         setTimeout(function(){
@@ -62,7 +62,6 @@ let $audio = $('.audio');
 
 async function wakeUpHeroku(){
     await axios.get('https://poke-war.herokuapp.com/api/');
-    console.log('awake!')
 }
 
 function dialogScript() {
@@ -90,8 +89,8 @@ function dialogScript() {
                 window.localStorage.setItem('playedBefore', JSON.stringify('true'))
                 $initialDialogH3.css('display', 'none');
                 $textArrow.css('display', 'none');
-                $generationContainer.css('display', 'none')
-                window.location.replace('app.html')
+                $generationContainer.css('display', 'none');
+                window.location.replace('app.html');
             });
         }, 100)
     }
@@ -130,7 +129,7 @@ function returningChoices(){
     $returningDiv.css('display', 'none');
     $returningChoicesDiv.css('display', 'flex');
     $continueSpan.on('click', function(){
-        window.location.replace('app.html')
+        window.location.replace('app.html');
     })
     $newGameSpan.on('click', function(){
         window.localStorage.setItem('playedBefore', JSON.stringify('false'));
