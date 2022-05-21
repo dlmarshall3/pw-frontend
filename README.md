@@ -14,7 +14,7 @@ It's almost identical to the game of War, except the whole...Pokemon thing. Each
 
 ## Challenges
 
-Factoring in responsive design when you aren't relying on a framework like Vue or React can be tough. I didn't want to use Bootstrap, but in the end, to account for as many devices as possible with minimal work, it made the most sense. Also, factoring in the type advantages is something that I am still weighing out how to handle properly. There are a few match-ups where it doesn't quite work, because of dual-type Pokemon, but I would wager 90% of the match-ups will be correct.
+Factoring in responsive design when you aren't relying on a framework like Vue or React can be tough. I didn't want to use Bootstrap, but in the end, to account for as many devices as possible with minimal work, it made the most sense. Also, handling the type advantages is something that I am still weighing out how to handle properly. For example, some Pokemon have 4x weaknesses compared to your typical 2x, which is something I plan on changing when I eventually refactor this with Vue. As a result, there are a few match-ups where it doesn't quite work, because of dual-type Pokemon, but I would wager 90% of the match-ups will be correct.
 
 ## Thank you
 
