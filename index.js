@@ -1,3 +1,5 @@
+//DOM Load
+
 $(document).ready(function(){
 
     wakeUpHeroku();
@@ -37,6 +39,8 @@ $(document).ready(function(){
     })
 })
 
+//Variables
+
 let $masterDiv = $('#master-div');
 let $returningDiv = $('#returning-div');
 let $returningChoicesDiv = $('#returning-choices-div');
@@ -54,11 +58,12 @@ let $introMusic = $('#intro-music');
 let $selectSFX = $('#select');
 let $audio = $('.audio');
 
+//Functions
+
 async function wakeUpHeroku(){
     await axios.get('https://poke-war.herokuapp.com/api/');
     console.log('awake!')
 }
-
 
 function dialogScript() {
     if($headerDiv.css('visibility','hidden')){
@@ -122,12 +127,12 @@ function generationSelected(){
 }
 
 function returningChoices(){
-    $('#returning-div').css('display', 'none');
-    $('#returning-choices-div').css('display', 'flex');
-    $('#continue').on('click', function(){
+    $returningDiv.css('display', 'none');
+    $returningChoicesDiv.css('display', 'flex');
+    $continueSpan.on('click', function(){
         window.location.replace('app.html')
     })
-    $('#new-game').on('click', function(){
+    $newGameSpan.on('click', function(){
         window.localStorage.setItem('playedBefore', JSON.stringify('false'));
         window.localStorage.setItem('numberOfPokemon', JSON.stringify(null));
         window.localStorage.setItem('generationChoice', JSON.stringify(null));

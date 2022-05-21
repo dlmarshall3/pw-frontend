@@ -1,3 +1,5 @@
+//DOM Load
+
 $(document).ready( () => {
     getAllPokemon();
     shuffleArray(pokedexIntegerArray);
@@ -19,6 +21,7 @@ $(document).ready( () => {
     $homeButton.on('click', () => { window.location.replace('index.html')});
 });
 
+//Variables
 
 const totalPokemonPool = parseInt(JSON.parse(window.localStorage.getItem('numberOfPokemon')));
 const generationChoice = parseInt(JSON.parse(window.localStorage.getItem('generationChoice')));
@@ -71,6 +74,8 @@ let $timeForWarDiv = $('#time-for-war-div');
 let $replacementH2 = $('#replacement-h2');
 let $pokemonCry = $('#pokemon-cry');
 let $selectSFX = $('#select');
+
+// Functions
 
 function startMusic(){
     if(generationChoice === 151){
