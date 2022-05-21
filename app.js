@@ -398,17 +398,6 @@ function timeForWar(){
     $playerOneStats.css('color', '#000000');
     $playerTwoStats.css('color', '#000000');
 
-    console.log(
-        'before war', '\n',
-        'p1 active arr', playerOneActiveArr, '\n',
-        'p1 deck arr', playerOneDeckArr, '\n',
-        'p1 played arr', playerOnePlayedArr, '\n',
-        '*****************************','\n',
-        'p2 active arr', playerTwoActiveArr, '\n',
-        'p2 deck arr', playerTwoDeckArr, '\n',
-        'p2 played arr', playerTwoPlayedArr
-    )
-
     function timeout(){
         setTimeout(function(){
             $replacementH2.html('3');
